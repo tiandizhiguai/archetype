@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor name="servicearchetype">
+	<requiredProperties>
+		<requiredProperty key="appName">
+			<vale>${appName}</vale>
+		</requiredProperty>
+		<requiredProperty key="package">
+			<value>${package}</value>
+		</requiredProperty>
+		<requiredProperty key="projectVersion">
+		    <value>${projectVersion}</value>
+		    <defaultValue>1.0.0</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="junitVersion">
+		    <value>${junitVersion}</value>
+		    <defaultValue>4.10</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="jettyVersion">
+		    <value>${jettyVersion}</value>
+		    <defaultValue>9.0.2.v20130417</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="springVersion">
+		    <value>${springVersion}</value>
+		    <defaultValue>4.1.2.RELEASE</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="mybatisVersion">
+		    <value>${mybatisVersion}</value>
+		    <defaultValue>3.2.8</defaultValue>
+		</requiredProperty>
+	</requiredProperties>
+	<modules>
+	    <!-- 公共模块 -->
+		<module id="common" dir="common" name="common">
+			<fileSets>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/main/java</directory>
+					<includes>
+						<include>**/*.java</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/main/resources</directory>
+					<includes>
+						<include>**/*.*</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>pom.xml</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+		</module>
+		
+		<!-- 业务处理 -->
+		<module id="biz" dir="biz" name="biz">
+			<fileSets>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/main/java</directory>
+					<includes>
+						<include>**/*.java</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/test/java</directory>
+					<includes>
+						<include>**/*.java</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/main/resources</directory>
+					<includes>
+						<include>**/*.*</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/test/resources</directory>
+					<includes>
+						<include>**/*.*</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>pom.xml</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+		</module>
+		
+		<!-- 数据处理 -->
+		<module id="dal" dir="dal" name="dal">
+			<fileSets>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/main/java</directory>
+					<includes>
+						<include>**/*.java</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/test/java</directory>
+					<includes>
+						<include>**/*.java</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/main/resources</directory>
+					<includes>
+						<include>**/*.*</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/test/resources</directory>
+					<includes>
+						<include>**/*.*</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>pom.xml</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+		</module>
+		
+		<!-- 部署 -->
+		<module id="deploy" dir="deploy" name="deploy">
+			<fileSets>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/main/resources</directory>
+					<includes>
+						<include>**/*.*</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>htdocs/</directory>
+					<includes>
+						<include>**/index.html</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>pom.xml</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+		</module>
+		
+		<!-- 模型展示 -->
+		<module id="web" dir="web" name="web">
+			<fileSets>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/main/java</directory>
+					<includes>
+						<include>**/*.java</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/main/resources</directory>
+					<includes>
+						<include>**/*.*</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>pom.xml</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+		</module>
+		
+		<!-- 配置 -->
+		<module id="bundle" dir="bundle" name="bundle">
+			<fileSets>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/main/java</directory>
+					<includes>
+						<include>**/*.java</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/main/resources</directory>
+					<includes>
+						<include>**/*.*</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>pom.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" packaged="false">
+					<directory>src/main/webapp/</directory>
+					<includes>
+						<include>**/*.*</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+		</module>
+		
+		<!-- 共享组件 -->
+		<module id="shared" dir="shared" name="shared">
+			<fileSets>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/main/java</directory>
+					<includes>
+						<include>**/*.java</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8" packaged="false">
+					<directory>src/main/resources</directory>
+					<includes>
+						<include>**/*.*</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>pom.xml</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+		</module>
+	</modules>
+</archetype-descriptor>
