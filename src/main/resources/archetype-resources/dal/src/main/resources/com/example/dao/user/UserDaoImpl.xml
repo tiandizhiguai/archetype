@@ -10,7 +10,7 @@
 		<result property="password" column="passwd" jdbcType="VARCHAR" />
 	</resultMap>
 
-	<select id="getUsers" resultMap="userResult" parameterType="userParam">
+	<select id="getUsers" resultMap="userResult" parameterType="com.example.param.user.UserParam">
 	    <!-- 由于maven进行了变量替换，请为变量加上花括号 -->
 		select * from users where login_name = #{loginName} and passwd = #{password}
 	</select>
