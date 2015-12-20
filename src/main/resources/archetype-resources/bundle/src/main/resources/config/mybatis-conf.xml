@@ -23,7 +23,4 @@
 		<!-- 数据库超过20秒仍未响应则超时 -->
 		<setting name="defaultStatementTimeout" value="20" />
 	</settings>
-	<typeAliases>
-		<typeAlias alias="userParam" type="com.example.param.user.UserParam" />
-	</typeAliases>
 </configuration>  
