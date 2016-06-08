@@ -1,4 +1,4 @@
-package com.example.controller.user;
+package com.example.controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
